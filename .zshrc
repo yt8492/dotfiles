@@ -37,7 +37,8 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export GO111MODULE=on
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"

@@ -8,10 +8,11 @@ brew install rbenv
 brew install ruby-build
 brew install docker
 brew cask install docker
-brew install nodebrew
-mkdir -p ~/.nodebrew/src
-nodebrew install-binary stable
-nodebrew use stable
+brew install nodenv
+brew install node-build
+eval "$(nodenv init -)"
+nodenv install 12.18.3
+nodenv global 12.18.3
 chsh -s /bin/zsh
 npm install --global pure-prompt
 brew install zsh-syntax-highlighting
