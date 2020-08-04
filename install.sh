@@ -20,3 +20,4 @@ brew cask install intellij-idea
 brew cask install webstorm
 brew cask install goland
 brew cask install visual-studio-code
+curl https://raw.githubusercontent.com/yt8492/dotfiles/master/.zshrc > ~/.zshrc
