@@ -10,6 +10,8 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+PROMPT="%~ %# "
+
 # 補完機能を有効にする
 autoload -Uz compinit
 compinit
@@ -30,4 +32,12 @@ setopt print_eight_bit
 autoload -U promptinit; promptinit
 prompt pure
 
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export GO111MODULE=on
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+eval "$(nodenv init -)"
