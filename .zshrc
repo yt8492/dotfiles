@@ -32,6 +32,7 @@ setopt print_eight_bit
 autoload -U promptinit; promptinit
 prompt pure
 
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
