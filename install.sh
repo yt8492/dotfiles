@@ -2,12 +2,16 @@
 brew update
 brew install wget
 brew cask
-brew cask install java
+brew cask install java11
+brew cask install adoptopenjdk8
+brew install sbt
 brew install go
 brew install rbenv
 brew install ruby-build
 brew install docker
 brew cask install docker
+brew install anyenv
+anyenv init
 brew install nodenv
 brew install node-build
 eval "$(nodenv init -)"
