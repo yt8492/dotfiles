@@ -11,12 +11,17 @@ brew install ruby-build
 brew install docker
 brew cask install docker
 brew install anyenv
-anyenv init
-brew install nodenv
-brew install node-build
+anyenv install --init
+eval "$(anyenv init -)"
+anyenv install nodenv
 eval "$(nodenv init -)"
+anyenv install jenv
+eval "$(jenv init -)"
 nodenv install 12.18.3
 nodenv global 12.18.3
+jenv add `/usr/libexec/java_home -v "1.8"`
+jenv add `/usr/libexec/java_home -v "11"`
+jenv enable-plugin export
 chsh -s /bin/zsh
 npm install --global pure-prompt
 brew install zsh-syntax-highlighting
