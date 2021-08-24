@@ -2,12 +2,12 @@
 brew update
 brew cask
 brew tap homebrew/cask-versions
-brew cask install adoptopenjdk8
+brew install adoptopenjdk8 --cask
 brew install git
 brew install sbt
 brew install go
 brew install docker
-brew cask install docker
+brew install docker --cask
 brew install anyenv
 yes | anyenv install --init
 anyenv install nodenv
@@ -20,10 +20,10 @@ jenv add `/usr/libexec/java_home -v "1.8"`
 jenv enable-plugin export
 chsh -s /bin/zsh
 npm install --global pure-prompt
-brew cask install android-studio
-brew cask install intellij-idea
-brew cask install webstorm
-brew cask install goland
-brew cask install visual-studio-code
+brew install android-studio --cask
+brew install intellij-idea --cask
+brew install webstorm --cask
+brew install goland --cask
+brew install visual-studio-code --cask
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 curl https://raw.githubusercontent.com/yt8492/dotfiles/master/.zshrc > ~/.zshrc
