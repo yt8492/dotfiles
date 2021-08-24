@@ -1,6 +1,5 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
-brew cask
 brew tap homebrew/cask-versions
 brew install adoptopenjdk8 --cask
 brew install git
@@ -14,6 +13,7 @@ anyenv install nodenv
 anyenv install jenv
 anyenv install rbenv
 eval "$(anyenv init -)"
+exec $SHELL -l
 nodenv install 12.18.3
 nodenv global 12.18.3
 jenv add `/usr/libexec/java_home -v "1.8"`
