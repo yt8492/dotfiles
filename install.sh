@@ -1,6 +1,8 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
 brew tap homebrew/cask-versions
+brew tap AdoptOpenJDK/openjdk
+brew install adoptopenjdk11 --cask
 brew install adoptopenjdk8 --cask
 brew install git
 brew install sbt
@@ -17,6 +19,7 @@ exec $SHELL -l
 nodenv install 12.18.3
 nodenv global 12.18.3
 jenv add `/usr/libexec/java_home -v "1.8"`
+jenv add `/usr/libexec/java_home -v "11"`
 jenv enable-plugin export
 chsh -s /bin/zsh
 npm install --global pure-prompt
