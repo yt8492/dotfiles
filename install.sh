@@ -3,6 +3,7 @@ brew update
 brew cask
 brew tap homebrew/cask-versions
 brew cask install adoptopenjdk8
+brew install git
 brew install sbt
 brew install go
 brew install docker
