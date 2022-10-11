@@ -8,16 +8,18 @@ brew install git
 brew install sbt
 brew install go
 brew install docker
-brew install docker --cask
 brew install anyenv
 yes | anyenv install --init
 anyenv install nodenv
 anyenv install jenv
 anyenv install rbenv
+anyenv install pyenv
 eval "$(anyenv init -)"
 exec $SHELL -l
-nodenv install 12.18.3
-nodenv global 12.18.3
+pyenv install 3.10.7
+pyenv global 3.10.7
+nodenv install 16.17.1
+nodenv global 16.17.1
 jenv add `/usr/libexec/java_home -v "1.8"`
 jenv add `/usr/libexec/java_home -v "11"`
 jenv enable-plugin export
